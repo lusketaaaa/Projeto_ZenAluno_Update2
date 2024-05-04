@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontre a sua paz interior</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="nav-logo">Zen</a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#" onclick="scrollToBottom()">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1></h1>
+            <p>"Descubra o herói dentro de você através da serenidade e clareza no Zen."</p>
+            <button class="buttons">Comece Agora</button>
+            <button class="buttons">Saiba Mais</button>
+        </section>
+        <section class="logozen">
+            <img src="zen spa canva sem fundo.png" alt="logo da zen spa">
+        </section>
+
+        <!-- Sobre Nos -->
+
+        <section id="sobre" class="aboutus">
+            <h2 class="aboutush2">Sobre nós:</h2>
+            <article class="descriptionaboutus">
+                <p>Há muitos anos, um grupo de amigos apaixonados pela prática da meditação se reuniu com um objetivo em comum: compartilhar os benefícios transformadores dessa arte milenar com o mundo. Movidos pela convicção de que a paz interior é acessível a todos, eles fundaram a Zen em 2005.
+
+                    Inspirados pelas tradições orientais e impulsionados pela visão de criar uma comunidade global dedicada ao bem-estar mental, começaram oferecendo aulas presenciais em sua cidade natal. Com o tempo, à medida que mais pessoas se interessavam pela meditação e mindfulness, a Zen expandiu seu alcance.
+                    
+                    Em 2010, lançaram seu primeiro site, oferecendo recursos online acessíveis a qualquer pessoa, em qualquer lugar. A plataforma logo se tornou um destino confiável para aqueles que buscam orientação e apoio em sua jornada espiritual.
+                    
+                    Ao longo dos anos, a Zen cresceu e evoluiu, lançando novos programas, aplicativos móveis e produtos que facilitam a prática da meditação no dia a dia. Hoje, a empresa é reconhecida como uma líder global em bem-estar mental, com uma comunidade vibrante de milhões de pessoas em todo o mundo que encontraram paz e equilíbrio através dos ensinamentos da Zen.
+                    
+                    
+                    
+                    </p>
+
+            </article>
+
+        </section>
+
+       <!-- Serviços -->
+
+<section id="servicos" class="services">
+    <h2 class="servicesh2">Serviços</h2>
+    <article class="servicesdescription">
+        <br>
+        <strong> 1. Retiro de Meditação nas Montanhas </strong> : Embarque em uma jornada transformadora para as alturas serenas das montanhas. Nossos retiros de meditação oferecem uma pausa revigorante da agitação da vida cotidiana. Desconecte-se do mundo exterior enquanto se reconecta consigo mesmo, mergulhando em práticas meditativas, ioga rejuvenescedora e refeições saudáveis preparadas com ingredientes locais e amorosos.
+        </p>
+        <br>
+        
+        <br>
+        <strong>2. Cursos Online de Mindfulness</strong> : Traga a essência da Zen para o conforto da sua casa com nossos cursos online de mindfulness. Desenvolvidos por especialistas em meditação, esses cursos abrangem uma variedade de técnicas, desde meditação guiada até exercícios de respiração consciente. Aprenda a integrar a prática mindfulness em sua vida diária, reduzindo o estresse e cultivando uma maior consciência do momento presente.
+        <br>
+        
+        
+        <br>
+        <strong>3. Workshops de Relaxamento no Local de Trabalho</strong> : Priorize o bem-estar dos seus colaboradores com os nossos workshops de relaxamento no local de trabalho. Oferecemos uma pausa revigorante da rotina corporativa, proporcionando técnicas práticas de relaxamento, exercícios de respiração e dicas para gerenciar o estresse. Promova um ambiente de trabalho mais calmo e produtivo, onde a saúde mental e emocional dos funcionários seja valorizada.
+        <br>
+        
+        
+        <br>
+        <strong>4. Terapia de Meditação Guiada</strong> : Encontre equilíbrio e clareza mental com nossas sessões de terapia de meditação guiada. Guiados por instrutores experientes, esses encontros individuais são projetados para ajudá-lo a explorar questões pessoais, reduzir a ansiedade e cultivar uma maior autoconsciência. Descubra o poder curativo da meditação enquanto trabalha em direção ao seu potencial mais elevado.
+        
+    </article>
+</section>
+
+
+
+
+    </main>
+    <footer class="footer">
+        <a href="https://www.instagram.com/"  target="_blank" > <img class="icone1" src="logo_instagram.png" alt="logo do instagram"> </a>
+        <a href="https://www.facebook.com/" target="_blank"  > <img  class="icone2"  src="logo_facebook.png" alt="logo do facebook"> </a>
+        <a href="https://www.whatsapp.com/" target="_blank"  > <img  class="icone3" src="logo_whatsapp.png" alt="logo do logo whatsapp "> </a>
+        
+    </footer>
+
+    <script>
+        // Função para rolar suavemente até a seção quando o link da navbar é clicado
+        document.querySelectorAll('.navbar a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const sectionId = this.getAttribute('href');
+                if(sectionId === '#servicos') {
+                    document.querySelector(sectionId).scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                } else {
+                    document.querySelector(sectionId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Função para rolar até o final da página quando o link de contato na navbar é clicado
+        function scrollToBottom() {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
